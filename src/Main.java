@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class Main {
   public static void main(String[] args) {
@@ -15,7 +16,12 @@ public class Main {
     } while (high < 8 || high > 35);
 
 
-    Pyramid pyramid = new Pyramid(high, symbole);
-    pyramid.printPyramid();
+    int finalHigh = high;
+    IntStream.range(1, high + 1).forEach(i -> {
+      IntStream.range(i-finalHigh, 0).forEach(j->System.out.print(" "));
+      IntStream.range(0,i*2-1).forEach(j -> System.out.print(symbole));
+      System.out.println();
+      }
+    );
   }
 }
