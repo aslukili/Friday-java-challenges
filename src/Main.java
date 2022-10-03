@@ -8,10 +8,9 @@ public class Main {
 
     System.out.println("Quel symbole voulez-vous pour le triangle ?");
     char symbole = userInput.next().charAt(0);
-    System.out.println("Combien de lignes (de 8 a 35)?");
-
     int high;
     do {
+      System.out.println("Combien de lignes (de 8 a 35)?");
       high =  userInput.nextInt();
     } while (high < 8 || high > 35);
 
